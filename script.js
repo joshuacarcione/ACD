@@ -57,7 +57,7 @@ $(document).ready(function() {
 				ACD.queueData=data;
 			}
 		},
-		url : OpenVBX.home + "p/acd?json=true",
+		url : OpenVBX.home + "/p/acd?json=true",
 		type : 'GET',
 		dataType : 'json'
 	});
