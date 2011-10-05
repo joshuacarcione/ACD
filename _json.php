@@ -2,7 +2,7 @@
 $base_uri="Accounts/".$this->twilio_sid;
 
 $client = new TwilioRestClient($this->twilio_sid,$this->twilio_token);
-$conferences = $client->request($base_uri."/Conferences?Status=1","GET");
+$conferences = $client->request($base_uri."/Conferences","GET");
 $queues = array();
 foreach($conferences->ResponseXml->Conferences->Conference as $conference){
     if(substr($conference->FriendlyName,0,strlen("QUEUE_")) == "QUEUE_"){
